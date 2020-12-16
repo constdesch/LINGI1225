@@ -60,6 +60,7 @@ def trajectoire(A):
     return sum
 
 # Les tests semblent buguer sur inginious
+# Problème en cas d'égalité, qui faire gagner? + Problème cohérence entre n et l'année de départ
 def piloteLePlusRapide(A, n):
     nP = len(A)
     nC = len(A[0])
