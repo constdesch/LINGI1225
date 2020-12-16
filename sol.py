@@ -50,14 +50,14 @@ def trajectoire(A):
     print(countV)
     return len(A[0])-1 + countV*(math.sqrt(2)-1)
 
-    def integrale(a,b,nbPoints):
-    step = float((b-a))/(nbPoints-1)
-    sum=0
-    for i in range(1,nbPoints):
-        f1 = f(a+i*step)
-        f0 = f(a+(i-1)*step)
-        sum += 1./2*(f1+f0)*step
-    return sum
+def integrale(a,b,nbPoints):
+step = float((b-a))/(nbPoints-1)
+sum=0
+for i in range(1,nbPoints):
+    f1 = f(a+i*step)
+    f0 = f(a+(i-1)*step)
+    sum += 1./2*(f1+f0)*step
+return sum
 
 # Les tests semblent buguer sur inginious
 # Problème en cas d'égalité, qui faire gagner? + Problème cohérence entre n et l'année de départ
