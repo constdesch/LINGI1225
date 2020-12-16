@@ -1,6 +1,6 @@
 # SOLUTION EXAMENS LINGE1225 
 # CONSTANTIN DE SCHAETZEN 
-
+# Si l'envie de prendre des cours particuliers te prend tu peux prendre contact avec moi :-) 
 
 import math
 #Bug des tests inginious? 
