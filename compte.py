@@ -14,7 +14,7 @@ class Compte:
     def nouveauMois(self):
         self.__montant +=[self.__montant[-1]]
     def interet(self):
-        if len(self.__montant) <12 or (type not in ["normal","premium"]):
+        if len(self.__montant) <12 or (self.__type not in ["normal","premium"]):
             return False
         somme = 0
         for i in range(1,13):
