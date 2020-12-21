@@ -25,3 +25,14 @@ class Compte:
         else:
             self.__montant += [self.__montant[-1]+0.01*mean]
         return True
+
+account = Compte("de Schaetzen","Constantin",1,"premium",300.0)
+print(account.getMontant()) #should print 300.0
+account.nouveauMois()
+account.setMontant(600)
+account.nouveauMois()
+print(account.interet()) #should print False
+for i in range(12):
+    account.nouveauMois()
+print(account.interet()) #should print true
+print(account.getMontant())
