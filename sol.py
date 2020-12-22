@@ -192,3 +192,4 @@ class Casier:
             if tab[i].avgAlcool() >= self.avgAlcool():
                 return False
         return True
+    
