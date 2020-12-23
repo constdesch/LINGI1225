@@ -4,6 +4,36 @@
 
 import math
 #Bug des tests inginious? 
+class Reveil:
+    def __init__(self, heure, minute, seconde):
+        self.__heure = heure
+        self.__minute = minute
+        self.__seconde = seconde
+
+    def getHeure(self):
+        return self.__heure
+
+    def getMinute(self):
+        return self.__minute
+
+    def getSeconde(self):
+        return self.__seconde
+
+    def nouvelleHeure(self, nbseconde):
+        dh = nbseconde // (60 * 60)
+        dm = (nbseconde % (60 * 60)) // 60
+        ds = ((nbseconde % (60 * 60)) % 60)
+        self.__seconde += ds
+        if self.__seconde > 60:
+            self.__seconde -= 60
+            self.__minute += 1
+        self.__minute += dm
+        if self.__minute > 60:
+            self.__minute -= 60
+            self.__heure += 1
+        self.__heure += dh
+        self.__heure = self.__heure % 24
+
 def arret(A):
     H = len(A)
     L = len(A[0])
