@@ -3,7 +3,28 @@
 # Si l'envie de prendre des cours particuliers te prend tu peux prendre contact avec moi :-) 
 
 import math
-#Bug des tests inginious? 
+def motCache(grille,mot):
+    m,n = len(grille), len(grille[0])
+    #recherche horizontale
+    for i in range(m):
+        for j in range(n):
+            count = 0
+            while(j<n and grille[i][j]==mot[count]):
+                count +=1 
+                j+=1
+                if count == len(mot):
+                    return True
+    for j in range(n):
+        for i in range(m):
+            count = 0
+            while(i<m and grille[i][j]==mot[count]):
+                count += 1
+                i+=1 
+                if count == len(mot):
+                    return True
+    return False
+
+                    
 class Reveil:
     def __init__(self, heure, minute, seconde):
         self.__heure = heure
