@@ -24,11 +24,11 @@ class Reveil:
         dm = (nbseconde % (60 * 60)) // 60
         ds = ((nbseconde % (60 * 60)) % 60)
         self.__seconde += ds
-        if self.__seconde > 60:
+        if self.__seconde >= 60:
             self.__seconde -= 60
             self.__minute += 1
         self.__minute += dm
-        if self.__minute > 60:
+        if self.__minute >= 60:
             self.__minute -= 60
             self.__heure += 1
         self.__heure += dh
