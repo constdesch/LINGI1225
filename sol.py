@@ -3,6 +3,26 @@
 # Si l'envie de prendre des cours particuliers te prend tu peux prendre contact avec moi :-) 
 
 import math
+def calculModularite(A):
+	n = len(A)
+	d = [0]*n
+	somme = 0.0
+	for i in range(n):
+		for j in range(n):
+			d[i]+=A[i][j]
+			somme += A[i][j]
+
+	Q = [[0]*n for i in range(n)]
+	for i in range(n):
+		for j in range(n):
+			Q[i][j] = A[i][j]-(d[i]*d[j])/somme
+	return Q
+
+A = [[0,1,2],
+	[1,0,3],
+	[2,3,0]]
+print(calculModularite(A))
+
 def motCache(grille,mot):
     m,n = len(grille), len(grille[0])
     #recherche horizontale
@@ -108,7 +128,7 @@ def integrale(a,b,nbPoints):
         f1 = f(a+i*step)
         f0 = f(a+(i-1)*step)
         sum += 1./2*(f1+f0)*step
-return sum
+        return sum
 
 # Les tests semblent buguer sur inginious
 # Problème en cas d'égalité, qui faire gagner? + Problème cohérence entre n et l'année de départ
