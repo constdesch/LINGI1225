@@ -74,7 +74,7 @@ class Reveil:
             self.__heure += 1
         self.__heure += dh
         self.__heure = self.__heure % 24
-
+#test inginious ne tiennent pas compte de l'orientation de l'axe vertical
 def arret(A):
     H = len(A)
     L = len(A[0])
@@ -139,7 +139,7 @@ def piloteLePlusRapide(A, n):
     victoire = [0]*nP
     for k in range(nA-1-n,nA):
         for j in range(nC):
-            t = A[0][j][k]
+            t = A[0][j][k] #marche pas si le premier pilote n'a pas couru a changer
             winner = 0
             for i in range(nP):
                 if A[i][j][k] != -1 and A[i][j][k] < t:
