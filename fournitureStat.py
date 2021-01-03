@@ -1,6 +1,6 @@
 def fournitureStat(A):
     n = len(A[0])
-    idx = input("Entrez le numero de la fourniture:")
+    idx = int(input("Entrez le numero de la fourniture:"))
     idx -=1
     if idx<0 or idx >len(A[0])-1:
         print("erreur : Aucune fourniture n'est associee a ce numero")
