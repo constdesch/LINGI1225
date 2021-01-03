@@ -139,10 +139,10 @@ def piloteLePlusRapide(A, n):
     victoire = [0]*nP
     for k in range(nA-1-n,nA):
         for j in range(nC):
-            t = A[0][j][k] #marche pas si le premier pilote n'a pas couru a changer
+            t = A[0][j][k]
             winner = 0
             for i in range(nP):
-                if A[i][j][k] != -1 and A[i][j][k] < t:
+                if A[i][j][k] != -1 and (A[i][j][k] < t or t == -1): #le if t==-1 fixe le probleme si A[0][j][k] == -1 
                     t = A[i][j][k]
                     winner = i
             victoire[winner]+=1
